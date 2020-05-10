@@ -125,7 +125,12 @@ class CLog
         {
             std::lock_guard<std::mutex> lock(m_LogLock);
             m_LogToFile = false;
-            m_OutFile->CloseFile();
+
+            if(m_OutFile)
+            {
+                m_OutFile->CloseFile();
+                m_OutFile = nullptr;
+            }
         }
 
         /**
