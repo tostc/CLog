@@ -30,6 +30,7 @@
 #include <functional>
 #include <iostream>
 #include <fstream>
+#include <memory>
 #include <mutex>
 #include <thread>
 #include <map>
